@@ -2,10 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+// routes/web.php
+
+// Ruta para mostrar el formulario de inicio de sesión
+Route::get('login', function () {
+    return view('login');
 });
 
-Auth::routes();
+// Ruta para mostrar el formulario de registro
+Route::get('register', function () {
+    return view('register');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
